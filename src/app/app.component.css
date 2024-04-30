@@ -1,12 +1,44 @@
 .container {
-  width: 500px;
-  margin: 20px auto;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
-.container h3{
-  font-size: xx-large;
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.container h4{
-  font-size: x-large;
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.row {
+  margin-bottom: 30px; /* Increased row spacing */
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.file-input {
+  border: 2px solid #3498db;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.file-content {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
 }

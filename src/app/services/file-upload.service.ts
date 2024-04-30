@@ -26,4 +26,11 @@ export class FileUploadService {
   getFiles(): Observable<any> {
     return this.http.get(`${this.baseUrl}/files`);
   }
+
+  uploadFile(file: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    return this.http.post<any>('http://localhost:3000/generateUnitTestFileUpload', formData, { responseType: 'json' });
+  }
 }

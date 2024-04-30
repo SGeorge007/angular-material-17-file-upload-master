@@ -1,6 +1,24 @@
 <div class="container">
-  <h3>bezkoder.com</h3>
-  <h4>{{ title }}</h4>
+  <h1 class="title">Welcome to Retail Hackathon!!</h1>
+  <p class="description">Generating unit tests via OpenAI models</p>
+  <div class="row">
+    <div class="col">
+      <label for="fileInput" class="label">Upload Your File</label>
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" class="file-input">
+    </div>
+  </div>
+  <div class="row mt-3" *ngIf="fileContent">
+    <div class="col">
+      <label for="fileContent" class="label">File Content</label>
+      <pre id="fileContent" class="file-content">{{ fileContent }}</pre>
+    </div>
+  </div>
+  <div class="row mt-3" *ngIf="fileContent">
+    <div class="col">
+      <label for="fileContent" class="label">Output</label>
+      <pre id="fileContent" class="file-content">{{ responseContent }}</pre>
+      <!-- <pre id="fileContent" class="file-content" [innerHTML]="responseContent | NewlineToBrPipe"></pre> -->
 
-  <app-file-upload></app-file-upload>
+    </div>
+  </div>
 </div>
